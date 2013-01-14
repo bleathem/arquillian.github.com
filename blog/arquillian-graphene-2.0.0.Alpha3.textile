@@ -6,19 +6,19 @@ author: lfryc
 h3. Highlighted Features
 
 - <i class="icon-star"></i> jQuery Selectors :=
-Graphene gets an own @@FindBy@ annotation and a @ByJQuery@ selector in order to fully support _jQuery_ selectors. ("read more":#jquery-selectors) =:
+Graphene gets its own @@FindBy@ annotation and @ByJQuery@ selector in order to fully support _jQuery_ selectors. ("read more":#jquery-selectors) =:
 
 - <i class="icon-star"></i> Injecting Selenium Resources := 
 The interesting Selenium APIs (HTML5, Mobile, etc.) can be injected to the test or page fragments directly. ("read more":#injecting-selenium-resources) =:
 
 - <i class="icon-star"></i> Fluent API for Waiting := 
-Waiting conditions can now be defined in nice fluent API. ("read more":#waiting-fluent-api)  =:
+Waiting conditions can now be defined in a nice fluent API. ("read more":#waiting-fluent-api)  =:
 
 - <i class="icon-star"></i> Injecting List of Page Fragments :=
 It's possible to inject a list of page fragments with @@FindBy List<PageFragment>@. =:
 
 - <i class="icon-star"></i> Page Fragment Enrichment := 
-Any Arquillian resource available through @@ArquillianResource@ can be injected to page fragments. =:
+Any Arquillian resource available through @@ArquillianResource@ can be injected into page fragments. =:
 
 h3. Important Bug Fixes
 
@@ -29,7 +29,7 @@ h3. Important Bug Fixes
 You are now completely protected against @StaleElementReferenceException@ when using page fragments and elements injected by @@FindBy@, because operations on those elements are evaluated lazily (at the time of usage) and they are re-evaluated when they get stale. =:
 
 - <i class="icon-star"></i> Refined Page Fragments :=
-Page Fragments received a lot of bug fixes and improvements. =:
+Page Fragments have received a lot of bug fixes and improvements. =:
 
 h3(#jquery-selectors). jQuery Selectors
 
@@ -73,14 +73,14 @@ public void test() {
 
 h3(#waiting-fluent-api). Fluent API for Waiting
 
-The Alpha2 API allowed you to define waitings like this:
+The Alpha2 API allowed you to define a wait like this:
 
 bc(prettify).. waitAjax().until(element(button).isVisible());
 
-p. In order to fully support code-completion, we have decided to deprecate this API in favor of fluent API:
+p. In order to fully support code-completion, we have decided to deprecate this API in favor of a fluent API:
 
 bc(prettify).. waitAjax().until().element(button).is().visible();
 
 h3. Roadmap
 
-This release is a significant milestone "on a way to Beta1":https://community.jboss.org/message/777443#777443.
+This release is a significant milestone "on the way to Beta1":https://community.jboss.org/message/777443#777443.
